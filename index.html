@@ -21,6 +21,7 @@ function agregarAmigo() {
     mostrarAmigos();
     nombreInput.value = ""; // Limpia el campo de texto
     nombreInput.focus();    // Devuelve el foco al input
+    resultado.innerHTML = ""; // Limpia el resultado anterior
 }
 
 // Muestra la lista de amigos en el DOM
@@ -31,6 +32,7 @@ function mostrarAmigos() {
         li.textContent = amigo;
         listaamigos.appendChild(li);
     });
+    resultado.innerHTML = ""; // Limpia el resultado al mostrar la lista
 }
 
 // Sortea un amigo al azar y lo muestra
