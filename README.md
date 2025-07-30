@@ -1,8 +1,8 @@
-# Amigo Secreto 🎁
+# Amigo Secreto 
 
 ![Portada del proyecto](challenge-amigo-secret-juan-torres/assets/amigo-secreto.png)
 
-[![Estado del proyecto](https://img.shields.io/badge/estado-en%20desarrollo-yellow)](https://github.com/tu-usuario/challenge-amigo-secret-juan-torres)
+[![Estado del proyecto](https://img.shields.io/badge/estado-completo-brightgreen)](https://github.com/juantorresun/Amigo_Secreto)
 [![Licencia MIT](https://img.shields.io/badge/licencia-MIT-green)](LICENSE)
 [![Hecho con JavaScript](https://img.shields.io/badge/hecho%20con-JavaScript-blue)](https://developer.mozilla.org/es/docs/Web/JavaScript)
 
@@ -29,8 +29,8 @@
 
 ## Estado del proyecto
 
-🚧 **En desarrollo**  
-El proyecto está funcional, pero se planean mejoras en la interfaz y nuevas características.
+**Completo**  
+El proyecto está terminado y listo para usarse.
 
 ---
 
@@ -39,17 +39,20 @@ El proyecto está funcional, pero se planean mejoras en la interfaz y nuevas car
 - **Agregar nombres:** Ingresa el nombre de cada participante y añádelo a la lista.
 - **Evita duplicados:** No permite agregar el mismo nombre dos veces.
 - **Sorteo aleatorio:** Selecciona un amigo secreto al azar y muestra el resultado.
-- **Limpieza de listas:** Puedes limpiar la lista para iniciar un nuevo sorteo.
 
-![Demostración](challenge-amigo-secret-juan-torres/assets/amigo-secreto.png)
 
 ---
 
 ## Acceso al Proyecto
 
+Puedes acceder al repositorio aquí:  
+[https://github.com/juantorresun/Amigo_Secreto](https://github.com/juantorresun/Amigo_Secreto)
+
+Para ejecutarlo localmente:
+
 1. Clona este repositorio:
    ```sh
-   git clone https://github.com/tu-usuario/challenge-amigo-secret-juan-torres.git
+   git clone https://github.com/juantorresun/Amigo_Secreto.git
    ```
 2. Abre la carpeta `challenge-amigo-secret-juan-torres`.
 3. Abre el archivo `index.html` en tu navegador favorito.
@@ -73,10 +76,10 @@ Puedes hacer un fork, crear un pull request o abrir issues para sugerencias y me
 
 ## Personas Desarrolladoras del Proyecto
 
-- Juan Torres
+- Juan Manuel Torres Leon
 
 ---
 
 ## Licencia
 
-Este proyecto está bajo la licencia MIT. Consulta el archivo
+Este proyecto está bajo la licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más
