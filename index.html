@@ -1,61 +1,42 @@
-// Declaración de un arreglo vacío para almacenar los nombres de los amigos
-let amigos = [];
-let listaamigos = document.getElementById("listaAmigos");
-let resultado = document.getElementById("resultado");
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Amigo Secreto</title>
+</head>
 
-// Función para agregar un amigo a la lista
-function agregarAmigo() {
-    let nombreInput = document.getElementById("amigo");
-    let nombre = nombreInput.value.trim();
+<body>
+    <main class="main-content">
+        <header class="header-banner">
+            <h1 class="main-title">Amigo Secreto</h1>
+            <img src="assets/amigo-secreto.png" alt="Imagen representativa de amigo secreto">
+        </header>
+        
+        <section class="input-section">
+            <h2 class="section-title">Digite el nombre de sus amigos</h2>
+            <div class="input-wrapper">
+                <input type="text" id="amigo" class="input-name" placeholder="Escribe un nombre">
+                <button class="button-add" onclick="agregarAmigo()">Añadir</button>
+            </div>
+           
+            <ul id="listaAmigos" class="name-list" aria-labelledby="listaAmigos" role="list"></ul>
+            <ul id="resultado" class="result-list" aria-live="polite"></ul>
 
-    if (nombre === "") {
-        alert("Por favor, inserte un nombre.");
-        return;
-    }
-    if (amigos.includes(nombre)) {
-        alert("Ese nombre ya está en la lista.");
-        return;
-    }
+            <div class="button-container">
+                <button class="button-draw" onclick="sortearAmigo()" aria-label="Sortear amigo secreto">
+                    <img src="assets/play_circle_outline.png" alt="Ícono para sortear">
+                    Sortear amigo
+                </button>
+            </div>
+        </section>
+    </main>
 
-    amigos.push(nombre);
-    mostrarAmigos();
-    nombreInput.value = ""; // Limpia el campo de texto
-    nombreInput.focus();    // Devuelve el foco al input
-    resultado.innerHTML = ""; // Limpia el resultado anterior
-}
+    <script src="app.js" defer></script>
+</body>
+</html>
 
-// Muestra la lista de amigos en el DOM
-function mostrarAmigos() {
-    listaamigos.innerHTML = "";
-    amigos.forEach(amigo => {
-        let li = document.createElement("li");
-        li.textContent = amigo;
-        listaamigos.appendChild(li);
-    });
-    resultado.innerHTML = ""; // Limpia el resultado al mostrar la lista
-}
-
-// Sortea un amigo al azar y lo muestra
-function sortearAmigo() {
-    if (amigos.length === 0) {
-        alert("No hay amigos para sortear.");
-        return;
-    }
-    let indiceAleatorio = Math.floor(Math.random() * amigos.length);
-    let amigoSeleccionado = amigos[indiceAleatorio];
-
-    
-    resultado.innerHTML = "";
-    let li = document.createElement("li");
-    li.textContent = `El amigo seleccionado es: ${amigoSeleccionado}`;
-    resultado.appendChild(li);
-    listaamigos.innerHTML = "";
-    amigos = [];
-}
-
-// Opcional: función para limpiar la lista de amigos
-function limpiarLista() {
-    amigos = [];
-    mostrarAmigos();
-    document.getElementById("resultado").innerHTML = "";
-}
