@@ -1,6 +1,6 @@
 # Amigo Secreto 
 
-![Portada del proyecto](challenge-amigo-secret-juan-torres/assets/amigo-secreto.png)
+![Portada del proyecto](assets/amigo-secreto.png)
 
 [![Estado del proyecto](https://img.shields.io/badge/estado-completo-brightgreen)](https://github.com/juantorresun/Amigo_Secreto)
 [![Licencia MIT](https://img.shields.io/badge/licencia-MIT-green)](LICENSE)
