@@ -1,6 +1,7 @@
 // Declaración de un arreglo vacío para almacenar los nombres de los amigos
 let amigos = [];
 let listaamigos = document.getElementById("listaAmigos");
+let resultado = document.getElementById("resultado");
 
 // Función para agregar un amigo a la lista
 function agregarAmigo() {
@@ -20,6 +21,7 @@ function agregarAmigo() {
     mostrarAmigos();
     nombreInput.value = ""; // Limpia el campo de texto
     nombreInput.focus();    // Devuelve el foco al input
+    resultado.innerHTML = ""; // Limpia el resultado anterior
 }
 
 // Muestra la lista de amigos en el DOM
@@ -30,6 +32,7 @@ function mostrarAmigos() {
         li.textContent = amigo;
         listaamigos.appendChild(li);
     });
+    resultado.innerHTML = ""; // Limpia el resultado al mostrar la lista
 }
 
 // Sortea un amigo al azar y lo muestra
@@ -41,7 +44,7 @@ function sortearAmigo() {
     let indiceAleatorio = Math.floor(Math.random() * amigos.length);
     let amigoSeleccionado = amigos[indiceAleatorio];
 
-    let resultado = document.getElementById("resultado");
+    
     resultado.innerHTML = "";
     let li = document.createElement("li");
     li.textContent = `El amigo seleccionado es: ${amigoSeleccionado}`;
